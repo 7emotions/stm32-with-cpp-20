@@ -104,9 +104,11 @@ def add_main(dir:str)->None:
 
 
 if __name__ == "__main__":
-    project = sys.argv[1]
+    if len(sys.argv) < 2:
+        raise Exception('No project specified')
+    
+    dir = sys.argv[1]
 
-    dir = os.path.join(os.getcwd(), project)
     if not os.path.exists(dir):
         raise FileNotFoundError('Project not found')
     

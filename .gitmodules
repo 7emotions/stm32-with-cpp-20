@@ -1,0 +1,3 @@
+[submodule "stm32_hal"]
+	path = stm32_hal
+	url = https://github.com/creeper5820/stm32_hal
